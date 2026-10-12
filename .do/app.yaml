@@ -3,12 +3,19 @@ region: nyc
 features:
   - buildpack-stack=ubuntu-22
 domains:
-  - domain: paypertual.com
-    type: PRIMARY
-  - domain: www.paypertual.com
+  - domain: payperpetual.com
     type: ALIAS
+  - domain: www.payperpetual.com
+    type: PRIMARY
 ingress:
   rules:
+    - redirect:
+        authority: www.payperpetual.com
+      match:
+        authority:
+          exact: payperpetual.com
+        path:
+          prefix: /
     - component:
         name: web
       match:

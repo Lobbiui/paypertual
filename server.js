@@ -57,5 +57,5 @@ createServer(async (request, response) => {
     }).end('Not found');
   }
 }).listen(port, '0.0.0.0', () => {
-  console.log(`Paypertual is listening on port ${port}`);
+  console.log(`Payperpetual is listening on port ${port}`);
 });

@@ -1,8 +1,8 @@
 {
-  "name": "paypertual",
+  "name": "payperpetual",
   "version": "1.0.0",
   "private": true,
-  "description": "Paypertual payment processing website",
+  "description": "Payperpetual payment processing website",
   "type": "module",
   "scripts": {
     "start": "node server.js"

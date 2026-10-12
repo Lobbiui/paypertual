@@ -25,7 +25,7 @@ contactForm?.addEventListener('submit', (event) => {
   }
 
   const data = new FormData(contactForm);
-  const subject = encodeURIComponent(`Paypertual inquiry: ${data.get('business')}`);
+  const subject = encodeURIComponent(`Payperpetual inquiry: ${data.get('business')}`);
   const body = encodeURIComponent([
     `Name: ${data.get('name')}`,
     `Business: ${data.get('business')}`,
@@ -33,12 +33,12 @@ contactForm?.addEventListener('submit', (event) => {
     `Phone: ${data.get('phone') || 'Not provided'}`,
     `Industry: ${data.get('industry')}`,
     '',
-    'How can Paypertual help?',
+    'How can Payperpetual help?',
     data.get('message')
   ].join('\n'));
 
   if (status) status.textContent = 'Opening your email app with the details ready to send…';
-  window.location.href = `mailto:hello@paypertual.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:hello@payperpetual.com?subject=${subject}&body=${body}`;
 });
 
 document.querySelectorAll('[data-year]').forEach((element) => {
