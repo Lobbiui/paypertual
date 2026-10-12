@@ -1,0 +1,26 @@
+name: paypertual
+region: nyc
+features:
+  - buildpack-stack=ubuntu-22
+ingress:
+  rules:
+    - component:
+        name: web
+      match:
+        path:
+          prefix: /
+services:
+  - name: web
+    environment_slug: node-js
+    github:
+      repo: Lobbiui/paypertual
+      branch: main
+      deploy_on_push: true
+    source_dir: /
+    build_command: npm install --omit=dev
+    run_command: npm start
+    http_port: 8080
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    health_check:
+      http_path: /

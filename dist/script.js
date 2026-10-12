@@ -25,7 +25,7 @@ contactForm?.addEventListener('submit', (event) => {
   }
 
   const data = new FormData(contactForm);
-  const subject = encodeURIComponent(`Paypertual inquiry — ${data.get('business')}`);
+  const subject = encodeURIComponent(`Paypertual inquiry: ${data.get('business')}`);
   const body = encodeURIComponent([
     `Name: ${data.get('name')}`,
     `Business: ${data.get('business')}`,
