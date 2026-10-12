@@ -38,7 +38,7 @@ contactForm?.addEventListener('submit', (event) => {
   ].join('\n'));
 
   if (status) status.textContent = 'Opening your email app with the details ready to send…';
-  window.location.href = `mailto:hello@paypertual.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:cody@paypertual.com?subject=${subject}&body=${body}`;
 });
 
 document.querySelectorAll('[data-year]').forEach((element) => {
